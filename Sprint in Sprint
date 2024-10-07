@@ -1,0 +1,101 @@
+3 start
+jump:3
+Put:0 
+Add:1 
+Sub:2 
+Jump_eq:4 
+Jump_less:5 
+Copy:7 
+Halt:9
+One:1
+Two:2
+Three:3
+Four:4
+
+instruction:0
+
+Program_index:Program
+
+
+start:2 Program_index One Program_index
+Loop:7 Instruction:Program instruction
+4 instruction jump Jump_Func
+
+4 instruction Put Put_Func
+4 instruction Add Add_Func
+4 instruction Sub Sub_Func
+4 instruction Jump_eq Jump_eq_Func
+4 instruction Jump_less Jump_less_Func
+4 instruction Copy Copy_Func
+4 instruction Halt Halt
+
+3 Halt
+
+Jump_Func:1 Instruction One Jump_cell
+1 Instruction Jump_cell:0 Instruction 
+2 Instruction One Instruction
+3 Loop
+
+Put_Func:1 Instruction One Next_cell
+7 Next_cell Value_cell
+1 Next_cell One Next_cell
+1 Program_index Next_cell:0 Put_cell
+7 Value_cell:0 Put_cell:0
+1 Instruction Three Instruction
+3 Loop
+
+
+Add_Func:1 Instruction One
+First1
+1 Program_index First1:0 First
+1 Instruction Two Second1
+1 Program_index Second1:0 Second
+1 Instruction Three R
+1 Program_index R:0 Result
+1 First:0 Second:0 Result:0
+1 Instruction Four Instruction
+3 Loop
+
+Sub_Func:1 Instruction One first1
+1 Program_index first1:0 first
+1 Instruction Two second1
+1 Program_index second1:0 second
+1 Instruction Three r
+1 Program_index r:0 result
+2 first:0 second:0 result:0
+1 Instruction Four Instruction
+3 Loop
+
+Jump_eq_Func:1 Instruction One fIrst1
+1 Program_index fIrst1:0 fIrst
+1 Instruction Two sEcond1
+1 Program_index sEcond1:0 sEcond
+4 fIrst:0 sEcond:0 Yes
+1 Instruction Four Instruction
+3 Loop
+Yes:1 Instruction Three G
+1 Program_index G:0 Instruction
+3 Loop
+
+Jump_less_Func:1 Instruction One fiRst1
+1 Program_index fiRst1:0 fiRst
+1 Instruction Two seCond1
+1 Program_index seCond1:0 seCond
+5 fiRst:0 seCond:0 Yes1
+1 Instruction Four Instruction
+3 Loop
+Yes1:1 Instruction Three G1
+1 Program_index G1:0 Instruction
+3 Loop
+
+Copy_Func:1 Instruction One Next_cell1
+7 Next_cell1 Value_cell1
+1 Next_cell1 One Next_cell1
+1 Program_index Next_cell1:0 Put_cell1
+1 Program_index Value_cell1:0 Val
+7 Val:0 Put_cell1:0
+1 Instruction Three Instruction
+3 Loop
+
+
+Program:3 3 0 10 9 1 6 6 0 0 23 6 14 0 4 5 18 5 2 3 22 7 5 25 0
