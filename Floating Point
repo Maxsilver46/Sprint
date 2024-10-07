@@ -1,0 +1,27 @@
+3 Start
+Number:34 Divisor:5 Ten:10 Reminder:0 Quotient:0 One:1
+Floating_Point_start:Q1 Copy:0
+Zero:0 Counter:0
+
+Start:7 Number Reminder
+Compare:5 Reminder Divisor Compare2
+2 Reminder Divisor Reminder
+1 One Quotient Quotient
+3 Compare
+
+Compare2:7 Quotient Address:Q1
+0 0 Quotient
+4 Reminder Zero Halt
+7 Reminder Copy
+7 Zero Reminder
+7 Ten Counter
+1 Address One Address
+
+Compare3:4 Counter Zero Compare
+1 Reminder Copy Reminder
+2 Counter One Counter 
+
+3 Compare3
+Halt:9
+
+Q1:0
