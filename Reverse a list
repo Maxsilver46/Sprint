@@ -1,0 +1,27 @@
+3 5 first_element_location:50
+length:5
+
+7 first_element_location F
+2 length One L
+1 F L L
+
+Compare:5 F L Go
+3 Halt
+
+Go:7 F F2
+7 L L2
+7 F:0 Temp
+7 L:0 F2:0
+7 Temp L2:0
+1 F One F
+2 L One L
+3 Compare
+
+One:1
+Halt:9
+Temp:0
+6
+9
+5
+23
+9
