@@ -1,0 +1,15 @@
+3 Start
+Number:6 Duplicate:0 Result:1
+Adder:0 One:1 Zero:0 Counter:0
+Start:7 Number Duplicate
+Compare:5 One Duplicate Go
+Stop:9
+Go:7 Zero Counter
+7 Result Adder
+7 Zero Result 
+Compare2:4 Counter Duplicate Go2
+1 Result Adder Result
+1 Counter One Counter
+3 Compare2
+Go2:2 Duplicate One Duplicate
+3 Compare
