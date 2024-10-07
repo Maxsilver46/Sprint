@@ -1,0 +1,13 @@
+3 7 F_element:El1 Length:5
+Target:39 Result:0
+
+Compare:4 Counter Length Halt
+4 Target Address:El1 Go
+1 Address One Address
+1 Counter One Counter
+3 Compare
+Go:1 Result One Result
+3 Halt
+Counter:0 One:1 Halt:9 
+
+El1:11 El2:2 El3:39 El4:43 El5:58
